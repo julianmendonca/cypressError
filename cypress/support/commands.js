@@ -11,10 +11,14 @@ Cypress.Commands.add("useIphone", (device) => {
 Cypress.Commands.add("getIframeDocument", (id) => {
   return cy
     .get("#" + id)
+    .its("0.contentDocument")
+    .should("exist");
 });
 Cypress.Commands.add("getIframeBody", (id) => {
   return cy
     .getIframeDocument(id)
+    .its("body")
+    .should("not.be.undefined")
     .then(cy.wrap);
 });
 
@@ -65,8 +69,7 @@ Cypress.Commands.add("replaceIFrameFetchWithXhr", (id) => {
     });
   });
   const getIframeWindow = (id) => {
-    return cy
-      .get("#" + id)
+    return cy.get("#" + id);
   };
   getIframeWindow(id).then((iframeWindow) => {
     delete iframeWindow.fetch;
