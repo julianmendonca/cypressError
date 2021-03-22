@@ -14,6 +14,17 @@ Cypress.Commands.add("getIframeDocument", (id) => {
     .its("0.contentDocument")
     .should("exist");
 });
+
+Cypress.Commands.add("checkGondolaIframe", (id) => {
+  cy.get("#" + id).then(($iframe) => {
+    const $body = $iframe.contents().find("body");
+    cy.wait(3000);
+    cy.get("#" + id).then(($iframe2) => {
+      const $body2 = $iframe2.contents().find("body");
+      cy.wrap($body2).find(".owl-item").should("exist");
+    });
+  });
+});
 Cypress.Commands.add("getIframeBody", (id) => {
   return cy
     .getIframeDocument(id)
@@ -21,23 +32,23 @@ Cypress.Commands.add("getIframeBody", (id) => {
     .should("not.be.undefined")
     .then(cy.wrap);
 });
-
+/*
+Cypress.Commands.add("checkGondolaIframe", (id, findText = ".owl-item") => {
+  return cy.getIframeBody(id).find(findText);
+});
+*/
 let LOCAL_STORAGE_MEMORY = {};
 
-Cypress.Commands.add("saveLocalStorageCache", () => {
-  if (Object.keys(localStorage)) {
-    Object.keys(localStorage).forEach((key) => {
-      LOCAL_STORAGE_MEMORY[key] = localStorage[key];
-    });
-  }
+Cypress.Commands.add("saveLocalStorage", () => {
+  Object.keys(localStorage).forEach((key) => {
+    LOCAL_STORAGE_MEMORY[key] = localStorage[key];
+  });
 });
 
-Cypress.Commands.add("restoreLocalStorageCache", () => {
-  if (Object.keys(LOCAL_STORAGE_MEMORY)) {
-    Object.keys(LOCAL_STORAGE_MEMORY).forEach((key) => {
-      localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
-    });
-  }
+Cypress.Commands.add("restoreLocalStorage", () => {
+  Object.keys(LOCAL_STORAGE_MEMORY).forEach((key) => {
+    localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
+  });
 });
 
 Cypress.Commands.add("clearLocalAndCookies", () => {
@@ -69,7 +80,10 @@ Cypress.Commands.add("replaceIFrameFetchWithXhr", (id) => {
     });
   });
   const getIframeWindow = (id) => {
-    return cy.get("#" + id);
+    return cy
+      .get("#" + id)
+      .its("0.contentWindow")
+      .should("exist");
   };
   getIframeWindow(id).then((iframeWindow) => {
     delete iframeWindow.fetch;

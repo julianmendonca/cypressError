@@ -1,0 +1,434 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 11,
+    "passes": 7,
+    "pending": 0,
+    "failures": 4,
+    "start": "2021-03-22T17:07:38.615Z",
+    "end": "2021-03-22T17:18:06.836Z",
+    "duration": 628221,
+    "testsRegistered": 11,
+    "passPercent": 63.63636363636363,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "24aeda35-5bc2-432c-a5fc-c8790c3a156b",
+      "title": "",
+      "fullFile": "cypress\\integration\\Arredo.spec.js",
+      "file": "cypress\\integration\\Arredo.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3df96b07-71b1-474d-99ea-ed1bd789d35c",
+          "title": "Arredo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "1ce38778-b737-4885-9f1e-df5a102fddcc",
+              "title": "Gondolas Productos",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "7c909cac-6370-4165-a048-397d41a2f0d4",
+                  "title": "Home",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "No Aparece la Caja de Registro",
+                      "fullTitle": "Arredo Gondolas Productos Home No Aparece la Caja de Registro",
+                      "timedOut": null,
+                      "duration": 36956,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/\");\ncy.get(\"body\").find(\"#braindw_register\");",
+                      "err": {},
+                      "uuid": "0dfba892-fcc7-4a7e-b0ab-0676a40cd65b",
+                      "parentUUID": "7c909cac-6370-4165-a048-397d41a2f0d4",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "0dfba892-fcc7-4a7e-b0ab-0676a40cd65b"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 36956,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "209abc93-f3f5-4d5d-9a7f-1af8b16d24a0",
+                  "title": "Producto 1",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Aparece Gondola Completa tu compra",
+                      "fullTitle": "Arredo Gondolas Productos Producto 1 Aparece Gondola Completa tu compra",
+                      "timedOut": null,
+                      "duration": 18256,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/reposera-multifuncion-63111l60766/p\");\ncy.checkGondolaIframe(\"Braindw17\");",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw17`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw17`, but never found it.\n    at Context.eval (https://www.arredo.com.ar/__cypress/tests?p=cypress\\support\\index.js:111:6)",
+                        "diff": null
+                      },
+                      "uuid": "18361581-1cf5-4d55-87e9-98d009207d35",
+                      "parentUUID": "209abc93-f3f5-4d5d-9a7f-1af8b16d24a0",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Aparece Gondola Personas que se interesan Compran",
+                      "fullTitle": "Arredo Gondolas Productos Producto 1 Aparece Gondola Personas que se interesan Compran",
+                      "timedOut": null,
+                      "duration": 13169,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/reposera-multifuncion-63111l60766/p\");\ncy.checkGondolaIframe(\"Braindw16\");",
+                      "err": {},
+                      "uuid": "575362e5-f169-40bd-a0a9-dc4ed980167a",
+                      "parentUUID": "209abc93-f3f5-4d5d-9a7f-1af8b16d24a0",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "575362e5-f169-40bd-a0a9-dc4ed980167a"
+                  ],
+                  "failures": [
+                    "18361581-1cf5-4d55-87e9-98d009207d35"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 31425,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "f37eaecd-4ecd-4e23-9c3b-2b8396cdecc3",
+                  "title": "Producto 2",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Aparece Gondola Completa tu compra",
+                      "fullTitle": "Arredo Gondolas Productos Producto 2 Aparece Gondola Completa tu compra",
+                      "timedOut": null,
+                      "duration": 14786,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/banco-taburete-leaf-63471z20782/p\");\ncy.checkGondolaIframe(\"Braindw74\");",
+                      "err": {},
+                      "uuid": "7fd6d53e-a68d-4131-8fbd-b8aefbc013d2",
+                      "parentUUID": "f37eaecd-4ecd-4e23-9c3b-2b8396cdecc3",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Aparece Gondola Los Que Compraron Compran",
+                      "fullTitle": "Arredo Gondolas Productos Producto 2 Aparece Gondola Los Que Compraron Compran",
+                      "timedOut": null,
+                      "duration": 9452,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/banco-taburete-leaf-63471z20782/p\");\ncy.checkGondolaIframe(\"Braindw16\");",
+                      "err": {},
+                      "uuid": "cf5a374b-d87e-4a7b-b44e-1d39c6589374",
+                      "parentUUID": "f37eaecd-4ecd-4e23-9c3b-2b8396cdecc3",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "7fd6d53e-a68d-4131-8fbd-b8aefbc013d2",
+                    "cf5a374b-d87e-4a7b-b44e-1d39c6589374"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 24238,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "ff6253c5-e038-4733-8eec-e7f7609cbff0",
+                  "title": "Producto 3",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Aparece Gondola Completa tu compra",
+                      "fullTitle": "Arredo Gondolas Productos Producto 3 Aparece Gondola Completa tu compra",
+                      "timedOut": null,
+                      "duration": 19135,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/reposera-multifuncion-63111l60766/p\");\ncy.checkGondolaIframe(\"Braindw17\");",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw17`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw17`, but never found it.\n    at Context.eval (https://www.arredo.com.ar/__cypress/tests?p=cypress\\support\\index.js:111:6)",
+                        "diff": null
+                      },
+                      "uuid": "92bc00c2-973d-48e0-acce-e61aafe43b42",
+                      "parentUUID": "ff6253c5-e038-4733-8eec-e7f7609cbff0",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Aparece Gondola Los Que Compraron Compran",
+                      "fullTitle": "Arredo Gondolas Productos Producto 3 Aparece Gondola Los Que Compraron Compran",
+                      "timedOut": null,
+                      "duration": 14978,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/reposera-multifuncion-63111l60766/p\");\ncy.checkGondolaIframe(\"Braindw16\");",
+                      "err": {},
+                      "uuid": "3b2866d3-9163-435b-aad3-1b791411be8f",
+                      "parentUUID": "ff6253c5-e038-4733-8eec-e7f7609cbff0",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "3b2866d3-9163-435b-aad3-1b791411be8f"
+                  ],
+                  "failures": [
+                    "92bc00c2-973d-48e0-acce-e61aafe43b42"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 34113,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "97b000f8-3cb9-4b3e-95a2-d0b3f16f592b",
+              "title": "Gondolas Home",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Aparece Gondola te podria interesar",
+                  "fullTitle": "Arredo Gondolas Home Aparece Gondola te podria interesar",
+                  "timedOut": null,
+                  "duration": 32237,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.wait(20000);\ncy.checkGondolaIframe(\"Braindw3\");",
+                  "err": {},
+                  "uuid": "fae02011-c6f0-42b3-96fe-27f92adbc8ea",
+                  "parentUUID": "97b000f8-3cb9-4b3e-95a2-d0b3f16f592b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Aparece Gondola baño",
+                  "fullTitle": "Arredo Gondolas Home Aparece Gondola baño",
+                  "timedOut": null,
+                  "duration": 41234,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.wait(20000);\ncy.checkGondolaIframe(\"Braindw4\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.owl-item`, but never found it. Queried from element: <body>",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.owl-item`, but never found it. Queried from element: <body>\n    at Context.eval (https://www.arredo.com.ar/__cypress/tests?p=cypress\\support\\index.js:116:41)",
+                    "diff": null
+                  },
+                  "uuid": "780ded52-982d-4135-9285-e726f9b5cde7",
+                  "parentUUID": "97b000f8-3cb9-4b3e-95a2-d0b3f16f592b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Aparece Gondola Recomendado Para Vos",
+                  "fullTitle": "Arredo Gondolas Home Aparece Gondola Recomendado Para Vos",
+                  "timedOut": null,
+                  "duration": 29533,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.wait(20000);\ncy.checkGondolaIframe(\"Braindw8\");",
+                  "err": {},
+                  "uuid": "cfa855f2-024b-4ac4-8d57-75cd3cd7cd07",
+                  "parentUUID": "97b000f8-3cb9-4b3e-95a2-d0b3f16f592b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Aparece Gondola Mixta",
+                  "fullTitle": "Arredo Gondolas Home Aparece Gondola Mixta",
+                  "timedOut": null,
+                  "duration": 41611,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.wait(20000);\ncy.checkGondolaIframe(\"Braindw9\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw9`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw9`, but never found it.\n    at Context.eval (https://www.arredo.com.ar/__cypress/tests?p=cypress\\support\\index.js:111:6)",
+                    "diff": null
+                  },
+                  "uuid": "6a906d50-a69f-45a2-bba8-3b2feb650d10",
+                  "parentUUID": "97b000f8-3cb9-4b3e-95a2-d0b3f16f592b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "fae02011-c6f0-42b3-96fe-27f92adbc8ea",
+                "cfa855f2-024b-4ac4-8d57-75cd3cd7cd07"
+              ],
+              "failures": [
+                "780ded52-982d-4135-9285-e726f9b5cde7",
+                "6a906d50-a69f-45a2-bba8-3b2feb650d10"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 144615,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

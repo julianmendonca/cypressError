@@ -1,5 +1,6 @@
 Cypress.Cookies.defaults({
   preserve: [
+    "bdw_last_category",
     "vtex_segment",
     "vtex_session",
     "VtexRCRequestCounter",
@@ -111,12 +112,8 @@ Cypress.Cookies.defaults({
   ],
 });
 
-Cypress.Screenshot.defaults({
-  screenshotOnRunFailure: false,
+Cypress.on("uncaught:exception", (err, runnable) => {
+  return false;
 });
-
-  Cypress.on("uncaught:exception", (err, runnable) => {
-    return false;
-  });
 
 import "./commands";

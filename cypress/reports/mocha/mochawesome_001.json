@@ -1,0 +1,597 @@
+{
+  "stats": {
+    "suites": 10,
+    "tests": 16,
+    "passes": 10,
+    "pending": 0,
+    "failures": 6,
+    "start": "2021-03-22T17:18:11.258Z",
+    "end": "2021-03-22T17:37:26.030Z",
+    "duration": 1154772,
+    "testsRegistered": 16,
+    "passPercent": 62.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2a34fbb0-ae28-483c-88fd-08b64ba662a2",
+      "title": "",
+      "fullFile": "cypress\\integration\\ArredoUy.spec.js",
+      "file": "cypress\\integration\\ArredoUy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c2a48fc4-71b9-468c-ab03-87e3688ecb72",
+          "title": "Arredo Uy",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "09d35d8b-7172-419d-884d-163bebb68513",
+              "title": "Buscador",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "c1a4c5a7-1b27-4b45-8ce3-1226fcea0909",
+                  "title": "Desplegable",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "La busqueda trae resultados",
+                      "fullTitle": "Arredo Uy Buscador Desplegable La busqueda trae resultados",
+                      "timedOut": null,
+                      "duration": 36550,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/\");\ncy.intercept(\"*sabana*\").as(\"apiCheck\");\ncy.get(\".fulltext-search-box\").type(\"sabana\", {\n  force: true\n});\ncy.wait(\"@apiCheck\");\ncy.get(\".ui-menu-item\");",
+                      "err": {},
+                      "uuid": "052a9f24-a184-482b-bc20-ff854a4cc12f",
+                      "parentUUID": "c1a4c5a7-1b27-4b45-8ce3-1226fcea0909",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "052a9f24-a184-482b-bc20-ff854a4cc12f"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 36550,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "68cac494-e655-45eb-a33f-aaaadba03550",
+              "title": "Gondola checkout",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Agrego un producto al carro",
+                  "fullTitle": "Arredo Uy Gondola checkout Agrego un producto al carro",
+                  "timedOut": null,
+                  "duration": 18514,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/habitacion/sabanas\");\ncy.get(\".product-link\").eq(0).click({\n  force: true\n});\ncy.get(\".buy-in-page-button\").eq(0).click({\n  force: true\n});",
+                  "err": {},
+                  "uuid": "fe29a5b9-baf1-417a-a11a-220d77c4f03a",
+                  "parentUUID": "68cac494-e655-45eb-a33f-aaaadba03550",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Aparece gondola en checkout",
+                  "fullTitle": "Arredo Uy Gondola checkout Aparece gondola en checkout",
+                  "timedOut": null,
+                  "duration": 11987,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/checkout#/cart\");\ncy.checkGondolaIframe(\"Braindw45\");",
+                  "err": {},
+                  "uuid": "7ae90d9b-3f36-470b-9a26-6e121676b1fa",
+                  "parentUUID": "68cac494-e655-45eb-a33f-aaaadba03550",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "fe29a5b9-baf1-417a-a11a-220d77c4f03a",
+                "7ae90d9b-3f36-470b-9a26-6e121676b1fa"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 30501,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a5b5cfbe-5a84-407e-9287-1ab32964804c",
+              "title": "Gondolas pagina de producto",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "c5197946-0323-41cc-af11-15039066a98c",
+                  "title": "Producto 1",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Aparece Gondola También podría interesarte",
+                      "fullTitle": "Arredo Uy Gondolas pagina de producto Producto 1 Aparece Gondola También podría interesarte",
+                      "timedOut": null,
+                      "duration": 49290,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/habitacion/sabanas\");\ncy.wait(5000);\ncy.get(\".product-link\").eq(0).click({\n  force: true\n});\ncy.wait(15000);\ncy.checkGondolaIframe(\"Braindw14\");",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw14`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw14`, but never found it.\n    at Context.eval (https://www.arredo.com.uy/__cypress/tests?p=cypress\\support\\index.js:111:6)",
+                        "diff": null
+                      },
+                      "uuid": "6e740f0b-f5aa-4f8d-8a5d-6c78218d2392",
+                      "parentUUID": "c5197946-0323-41cc-af11-15039066a98c",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Aparece Gondola Personas que se interesan en este producto compran",
+                      "fullTitle": "Arredo Uy Gondolas pagina de producto Producto 1 Aparece Gondola Personas que se interesan en este producto compran",
+                      "timedOut": null,
+                      "duration": 41948,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/habitacion/sabanas\");\ncy.wait(5000);\ncy.get(\".product-link\").eq(0).click({\n  force: true\n});\ncy.wait(15000);\ncy.checkGondolaIframe(\"Braindw15\");",
+                      "err": {},
+                      "uuid": "559a46a4-efa7-475c-b928-971d4f78efc1",
+                      "parentUUID": "c5197946-0323-41cc-af11-15039066a98c",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "559a46a4-efa7-475c-b928-971d4f78efc1"
+                  ],
+                  "failures": [
+                    "6e740f0b-f5aa-4f8d-8a5d-6c78218d2392"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 91238,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "820b8a6b-ed5d-4cb2-8eb3-020554a8dc09",
+                  "title": "Producto 2",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Aparece Gondola También podría interesarte",
+                      "fullTitle": "Arredo Uy Gondolas pagina de producto Producto 2 Aparece Gondola También podría interesarte",
+                      "timedOut": null,
+                      "duration": 47876,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/habitacion/sabanas\");\ncy.wait(5000);\ncy.get(\".product-link\").eq(1).click({\n  force: true\n});\ncy.wait(15000);\ncy.checkGondolaIframe(\"Braindw14\");",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw14`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw14`, but never found it.\n    at Context.eval (https://www.arredo.com.uy/__cypress/tests?p=cypress\\support\\index.js:111:6)",
+                        "diff": null
+                      },
+                      "uuid": "2836abf0-dc90-462b-8527-5da11b68ceba",
+                      "parentUUID": "820b8a6b-ed5d-4cb2-8eb3-020554a8dc09",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Aparece Gondola Personas que se interesan en este producto compran",
+                      "fullTitle": "Arredo Uy Gondolas pagina de producto Producto 2 Aparece Gondola Personas que se interesan en este producto compran",
+                      "timedOut": null,
+                      "duration": 40028,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/habitacion/sabanas\");\ncy.wait(5000);\ncy.get(\".product-link\").eq(1).click({\n  force: true\n});\ncy.wait(15000);\ncy.checkGondolaIframe(\"Braindw15\");",
+                      "err": {},
+                      "uuid": "8a1ee89b-3c58-4148-a7c0-1e75e98c2320",
+                      "parentUUID": "820b8a6b-ed5d-4cb2-8eb3-020554a8dc09",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "8a1ee89b-3c58-4148-a7c0-1e75e98c2320"
+                  ],
+                  "failures": [
+                    "2836abf0-dc90-462b-8527-5da11b68ceba"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 87904,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "d742149e-8a34-4c90-be91-ef76fa0a9fc3",
+                  "title": "Producto 3",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Aparece Gondola También podría interesarte",
+                      "fullTitle": "Arredo Uy Gondolas pagina de producto Producto 3 Aparece Gondola También podría interesarte",
+                      "timedOut": null,
+                      "duration": 61966,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/habitacion/sabanas\");\ncy.wait(5000);\ncy.get(\".product-link\").eq(2).click({\n  force: true\n});\ncy.wait(15000);\ncy.checkGondolaIframe(\"Braindw14\");",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw14`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw14`, but never found it.\n    at Context.eval (https://www.arredo.com.uy/__cypress/tests?p=cypress\\support\\index.js:111:6)",
+                        "diff": null
+                      },
+                      "uuid": "cc32a8e8-bc3c-4a93-9974-914729481120",
+                      "parentUUID": "d742149e-8a34-4c90-be91-ef76fa0a9fc3",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Aparece Gondola Personas que se interesan en este producto compran",
+                      "fullTitle": "Arredo Uy Gondolas pagina de producto Producto 3 Aparece Gondola Personas que se interesan en este producto compran",
+                      "timedOut": null,
+                      "duration": 44878,
+                      "state": "passed",
+                      "speed": "slow",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit(\"/habitacion/sabanas\");\ncy.wait(5000);\ncy.get(\".product-link\").eq(2).click({\n  force: true\n});\ncy.wait(15000);\ncy.checkGondolaIframe(\"Braindw15\");",
+                      "err": {},
+                      "uuid": "4930e7b4-2423-415b-a0dc-687c70f3b20e",
+                      "parentUUID": "d742149e-8a34-4c90-be91-ef76fa0a9fc3",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "4930e7b4-2423-415b-a0dc-687c70f3b20e"
+                  ],
+                  "failures": [
+                    "cc32a8e8-bc3c-4a93-9974-914729481120"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 106844,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "47fbeb78-8e12-4271-8663-730f6e0fa439",
+              "title": "Gondola pagina categoria",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Categoria habitacion",
+                  "fullTitle": "Arredo Uy Gondola pagina categoria Categoria habitacion",
+                  "timedOut": null,
+                  "duration": 19665,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/habitacion\");\ncy.checkGondolaIframe(\"Braindw12\");",
+                  "err": {},
+                  "uuid": "b359c053-d777-40c8-8953-12ec3ee16e40",
+                  "parentUUID": "47fbeb78-8e12-4271-8663-730f6e0fa439",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Categoria sabanas",
+                  "fullTitle": "Arredo Uy Gondola pagina categoria Categoria sabanas",
+                  "timedOut": null,
+                  "duration": 16552,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/habitacion/sabanas\");\ncy.checkGondolaIframe(\"Braindw12\");",
+                  "err": {},
+                  "uuid": "dae4813a-e0ff-40d9-a5a3-03fae67cb462",
+                  "parentUUID": "47fbeb78-8e12-4271-8663-730f6e0fa439",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b359c053-d777-40c8-8953-12ec3ee16e40",
+                "dae4813a-e0ff-40d9-a5a3-03fae67cb462"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 36217,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "5bee61df-8f5b-446a-ae62-2a0fee62a3f8",
+              "title": "Home",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Aparece caja de registro",
+                  "fullTitle": "Arredo Uy Home Aparece caja de registro",
+                  "timedOut": null,
+                  "duration": 21882,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.get(\"#braindw_register\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#braindw_register`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#braindw_register`, but never found it.\n    at Context.eval (https://www.arredo.com.uy/__cypress/tests?p=cypress\\integration\\ArredoUy.spec.js:212:10)",
+                    "diff": null
+                  },
+                  "uuid": "56af59f9-69fc-4714-a42a-88ea2cffb48f",
+                  "parentUUID": "5bee61df-8f5b-446a-ae62-2a0fee62a3f8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Gondola con imagen a la izquierda",
+                  "fullTitle": "Arredo Uy Home Gondola con imagen a la izquierda",
+                  "timedOut": null,
+                  "duration": 25990,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.checkGondolaIframe(\"Braindw4\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.owl-item`, but never found it. Queried from element: <body>",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.owl-item`, but never found it. Queried from element: <body>\n    at Context.eval (https://www.arredo.com.uy/__cypress/tests?p=cypress\\support\\index.js:116:41)",
+                    "diff": null
+                  },
+                  "uuid": "a4148939-2806-434c-911c-6536773d4be6",
+                  "parentUUID": "5bee61df-8f5b-446a-ae62-2a0fee62a3f8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Gondola te podria interesar",
+                  "fullTitle": "Arredo Uy Home Gondola te podria interesar",
+                  "timedOut": null,
+                  "duration": 15954,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.checkGondolaIframe(\"Braindw3\");",
+                  "err": {},
+                  "uuid": "2d2e30f7-b86c-4836-a8d7-d3345283fe6f",
+                  "parentUUID": "5bee61df-8f5b-446a-ae62-2a0fee62a3f8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Gondola recomendado para vos",
+                  "fullTitle": "Arredo Uy Home Gondola recomendado para vos",
+                  "timedOut": null,
+                  "duration": 14265,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.checkGondolaIframe(\"Braindw8\");",
+                  "err": {},
+                  "uuid": "19cadd67-b930-4bee-8b93-1adbc7398e1d",
+                  "parentUUID": "5bee61df-8f5b-446a-ae62-2a0fee62a3f8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Gondola ultimos vistos",
+                  "fullTitle": "Arredo Uy Home Gondola ultimos vistos",
+                  "timedOut": null,
+                  "duration": 21041,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit(\"/\");\ncy.checkGondolaIframe(\"Braindw9\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw9`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#Braindw9`, but never found it.\n    at Context.eval (https://www.arredo.com.uy/__cypress/tests?p=cypress\\support\\index.js:111:6)",
+                    "diff": null
+                  },
+                  "uuid": "c9781813-3a15-4ee9-9855-dbcabd9bdaeb",
+                  "parentUUID": "5bee61df-8f5b-446a-ae62-2a0fee62a3f8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2d2e30f7-b86c-4836-a8d7-d3345283fe6f",
+                "19cadd67-b930-4bee-8b93-1adbc7398e1d"
+              ],
+              "failures": [
+                "56af59f9-69fc-4714-a42a-88ea2cffb48f",
+                "a4148939-2806-434c-911c-6536773d4be6",
+                "c9781813-3a15-4ee9-9855-dbcabd9bdaeb"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 99132,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
